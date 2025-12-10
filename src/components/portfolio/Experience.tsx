@@ -14,6 +14,19 @@ const experiences = [
     current: true,
   },
   {
+    title: "Policy Sales / Financial Advisor",
+    company: "Old Mutual",
+    period: "Jan 2025 – June 2025",
+    location: "Bomet / Nairobi, Kenya",
+    description: [
+      "Sold insurance and financial policies while ensuring strict compliance with KYC/AML standards",
+      "Advised clients on financial planning, risk management, and policy selection",
+      "Maintained accurate customer records and digital documentation",
+      "Promoted secure digital financial products and customer awareness",
+    ],
+    current: false,
+  },
+  {
     title: "Full-Stack Software Developer",
     company: "Freelance / Self-Employed",
     period: "2023 – Present",
