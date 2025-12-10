@@ -1,4 +1,4 @@
-import { GraduationCap, Calendar, Award } from "lucide-react";
+import { GraduationCap, Calendar, Award, BadgeCheck } from "lucide-react";
 
 const education = [
   {
@@ -14,6 +14,29 @@ const education = [
     institution: "Kenyatta University",
     period: "2010 – 2015",
     highlight: "Second Class Upper Division",
+  },
+];
+
+const certifications = [
+  {
+    title: "AI / Machine Learning & LLM Training",
+    institution: "Moringa School, Kenya",
+  },
+  {
+    title: "Cyber Security Training",
+    institution: "IBM-MEA University",
+  },
+  {
+    title: "AML & CTF Certification",
+    institution: "National Bank of Kenya",
+  },
+  {
+    title: "Oracle DBA 21c: Master Database Administration Specialization",
+    institution: "Coursera",
+  },
+  {
+    title: "Entrepreneurship & Business Development",
+    institution: "CyberShujaa Program",
   },
 ];
 
@@ -57,6 +80,31 @@ const Education = () => {
                     <Award className="w-4 h-4 text-primary" />
                     <span className="text-sm font-medium text-primary">{edu.highlight}</span>
                   </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Certifications */}
+        <div className="mt-16 text-center mb-10">
+          <span className="text-primary font-mono text-sm tracking-wider uppercase">Professional Development</span>
+          <h3 className="text-2xl md:text-3xl font-bold mt-2">Certifications & Training</h3>
+        </div>
+
+        <div className="max-w-4xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {certifications.map((cert, index) => (
+            <div
+              key={index}
+              className="group p-5 rounded-xl border border-border bg-card hover:border-primary/30 transition-all duration-300"
+            >
+              <div className="flex items-start gap-3">
+                <div className="p-2 rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-colors shrink-0">
+                  <BadgeCheck className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground leading-tight">{cert.title}</h4>
+                  <p className="text-xs text-muted-foreground mt-1">{cert.institution}</p>
                 </div>
               </div>
             </div>
