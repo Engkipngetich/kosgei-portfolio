@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Welcome to your portfolio project
 
 ## Project info
 
@@ -10,7 +10,7 @@ There are several ways of editing your application.
 
 **Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Simply visit the (https://lovable.dev/projects/13dd8db9-d953-4f72-b85b-7a3185e582a8/) and start prompting.
 
 Changes made via Lovable will be committed automatically to this repo.
 
