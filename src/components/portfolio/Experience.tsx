@@ -27,6 +27,30 @@ const experiences = [
     current: false,
   },
   {
+    title: "Software Developer / QA Engineer",
+    company: "Tech With Brands (TWB)",
+    period: "2025",
+    location: "Remote / Nairobi, Kenya",
+    description: [
+      "Built secure full-stack applications with monitoring and automation",
+      "Conducted vulnerability assessments and developed automated scripts",
+      "Provided ICT operational support ensuring policy compliance",
+    ],
+    current: false,
+  },
+  {
+    title: "Software & Solutions Developer",
+    company: "Freelance / Consultant",
+    period: "2024 – 2025",
+    location: "Nairobi, Kenya",
+    description: [
+      "Designed cloud-based systems with encryption and secure authentication",
+      "Automated log monitoring, anomaly detection, and database workflows",
+      "Delivered technical documentation, process improvement, and systems architecture",
+    ],
+    current: false,
+  },
+  {
     title: "Full-Stack Software Developer",
     company: "Freelance / Self-Employed",
     period: "2023 – Present",
