@@ -80,7 +80,7 @@ const Contact = () => {
                 <Github className="w-5 h-5 text-muted-foreground hover:text-foreground" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/eng-kipngetich-kosgei-38526278/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full border border-border bg-card hover:border-primary/50 hover:bg-primary/5 transition-all"
