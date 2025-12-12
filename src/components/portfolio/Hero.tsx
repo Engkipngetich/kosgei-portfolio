@@ -62,15 +62,16 @@ const Hero = () => {
               </a>
             </Button>
             <Button variant="heroOutline" size="lg" asChild>
-              <a href="#projects">
-                View Projects
+              <a href="/resume.pdf" download="Kipngetich_Kosgei_CV.pdf">
+                <Download className="w-5 h-5" />
+                Download CV
               </a>
             </Button>
           </div>
 
           {/* Social links */}
           <div className="flex justify-center gap-4 mt-12 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-border bg-card hover:border-primary/50 hover:bg-primary/5 transition-all">
+            <a href="https://engkipngetich.github.io/personalweb.com/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-border bg-card hover:border-primary/50 hover:bg-primary/5 transition-all">
               <Github className="w-5 h-5 text-muted-foreground hover:text-foreground" />
             </a>
             <a href="https://www.linkedin.com/in/eng-kipngetich-kosgei-38526278/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-border bg-card hover:border-primary/50 hover:bg-primary/5 transition-all">
