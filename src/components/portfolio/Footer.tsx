@@ -9,7 +9,7 @@ const Footer = () => {
             © {currentYear} Kipngetich Kosgei. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
-            Built with <span className="text-primary">React</span> & <span className="text-primary">TypeScript</span>
+            Expert in <span className="text-primary">System Administration</span>, (Windows & Linux servers,) ,<span className="text-primary">Networking</span> (LAN/WAN, Fibre splicing), and <span className="text-primary">Software Development</span>
           </p>
         </div>
       </div>

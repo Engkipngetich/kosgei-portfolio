@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "UNITPAY Hackathon Project",
+    title: "UNIT-PAY Hackathon Project",
     description:
       "A full digital transformation prototype built for the UNITPAY Hackathon, featuring automated data workflows, intelligent processing pipelines, advanced UI/UX enhancements, secure authentication, and real‑time transactional updates. The project focused on performance tuning, API responsiveness, and end‑to‑end reliability across integrated services.",
     tech: ["React", "Flask", "Real-time", "Authentication"],
@@ -64,7 +64,7 @@ const Projects = () => {
             return (
               <div
                 key={project.title}
-                className="group relative p-6 rounded-xl border border-border bg-card/50 hover:bg-card hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
+                className="group relative p-8 rounded-xl border border-border bg-card/50 hover:bg-card hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="p-3 rounded-lg bg-primary/10 text-primary w-fit mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   <Icon className="w-6 h-6" />
@@ -89,7 +89,7 @@ const Projects = () => {
 
                 <div className="mt-2">
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="sm" className="flex items-center gap-2">
+                    <Button variant="outline" size="sm" className="flex items-center gap-1">
                       Visit Project <ExternalLink className="w-4 h-4" />
                     </Button>
                   </a>

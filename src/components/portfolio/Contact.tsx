@@ -43,14 +43,19 @@ const Contact = () => {
             </a>
 
             {/* Location */}
-            <div className="group p-6 rounded-xl border border-border bg-card/50 hover:bg-card hover:border-primary/30 transition-all text-center">
+            <a
+              href="https://www.google.com/maps/place/Nairobi,+Kenya"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-6 rounded-xl border border-border bg-card/50 hover:bg-card hover:border-primary/30 transition-all text-center"
+            >
               <div className="p-4 rounded-full bg-primary/10 text-primary w-fit mx-auto mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                 <MapPin className="w-6 h-6" />
               </div>
               <h3 className="font-semibold text-foreground mb-1">Location</h3>
               <p className="text-sm text-muted-foreground">Nairobi, Kenya</p>
               <p className="text-sm text-muted-foreground">P.O. Box 20, 00100</p>
-            </div>
+            </a>
           </div>
 
           {/* CTA */}
@@ -63,31 +68,30 @@ const Contact = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Button variant="hero" size="lg" asChild>
                 <a href="mailto:enginkipngetichkoskei@gmail.com">
-                  <Send className="w-5 h-5" />
-                  Send Message
+                  <Send className="w-5 h-5" /> Send Message
                 </a>
               </Button>
             </div>
 
             {/* Social links */}
-            <div className="flex justify-center gap-4 mt-8">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full border border-border bg-card hover:border-primary/50 hover:bg-primary/5 transition-all"
-              >
-                <Github className="w-5 h-5 text-muted-foreground hover:text-foreground" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/eng-kipngetich-kosgei-38526278/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full border border-border bg-card hover:border-primary/50 hover:bg-primary/5 transition-all"
-              >
-                <Linkedin className="w-5 h-5 text-muted-foreground hover:text-foreground" />
-              </a>
-            </div>
+            <div className="flex justify-center gap-4 mt-12 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+                        <a
+                          href="https://github.com/Engkipngetich/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-full border border-border bg-card hover:border-primary/50 hover:bg-primary/5 transition-all"
+                        >
+                          <Github className="w-5 h-5 text-muted-foreground hover:text-foreground" />
+                        </a>
+                        <a
+                          href="https://www.linkedin.com/in/eng-kipngetich-kosgei-38526278/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-full border border-border bg-card hover:border-primary/50 hover:bg-primary/5 transition-all"
+                        >
+                          <Linkedin className="w-5 h-5 text-muted-foreground hover:text-foreground" />
+                        </a>
+                      </div>
           </div>
         </div>
       </div>
