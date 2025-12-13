@@ -2,7 +2,7 @@ import { GraduationCap, Calendar, Award, BadgeCheck } from "lucide-react";
 
 const education = [
   {
-    degree: "Mastering in Software Development",
+    degree: "Professional--Mastering in Software Development",
     specialization: "Full-Stack Engineering",
     institution: "Moringa School",
     period: "2024 – 2025",
@@ -21,6 +21,7 @@ const certifications = [
   {
     title: "AI / Machine Learning & LLM Training",
     institution: "Moringa School, Kenya",
+    highlight: "Completed the course with practical projects",
   },
   {
     title: "Cyber Security Training",
