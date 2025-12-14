@@ -10,7 +10,7 @@ There are several ways of editing your application.
 
 **Use Lovable**
 
-Simply visit the (https://lovable.dev/projects/13dd8db9-d953-4f72-b85b-7a3185e582a8/) and start prompting.
+Simply visit the (https://kosgei-portfolio.onrender.com/) and start prompting.
 
 Changes made via Lovable will be committed automatically to this repo.
 
@@ -62,7 +62,7 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Simply open [https://kosgei-portfolio.onrender.com/) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
 
