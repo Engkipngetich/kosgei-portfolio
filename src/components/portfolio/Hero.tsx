@@ -135,11 +135,11 @@ P.O. Box 20, 00100
 
           {/* Name + Photo */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-4 animate-slide-up">
-            <img
-              src="/public/kk.jpg" // <-- Replace with your photo URL
-              alt="Kipngetich Kosgei"
-              className="w-32 h-32 rounded-full border-2 border-blue-500 object-cover"
-            />
+           <img
+  src="/kk.jpg"
+  alt="Kipngetich Kosgei"
+  className="w-32 h-32 rounded-full border-2 border-blue-500 object-cover"
+/>
             <h1 className="text-5xl md:text-7xl font-bold">
               <span className="text-foreground">Kipngetich</span>{" "}
               <span className="text-gradient">Kosgei</span>

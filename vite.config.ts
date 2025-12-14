@@ -11,6 +11,6 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: "dist", // Ensure the build folder is dist
+    outDir: "dist",
   },
 }));
