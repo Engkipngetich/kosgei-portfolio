@@ -23,97 +23,168 @@ const technicalSkills = [
 
 const Hero: React.FC = () => {
   const generatePDF = () => {
-    const doc = new jsPDF();
-    let y = 20;
+  const doc = new jsPDF();
+  const pageHeight = doc.internal.pageSize.height;
+  const margin = 20;
+  let y = margin;
+  const lineGap = 6;
 
-    doc.setFontSize(22);
-    doc.text("Kipngetich Kosgei", 20, y);
-    y += 10;
-
-    doc.setFontSize(14);
-    doc.text(
-      "Software Engineer • Network Engineering Specialist • IT Systems Support Expert",
-      20,
-      y
-    );
-    y += 10;
-
-    doc.setFontSize(12);
-    const summary = `
-Software Engineer specializing in full-stack development with hands-on experience in
-telecommunication systems and network infrastructure. Proficient in building scalable web applications using React, TypeScript, Node.js, and Python/Flask, while integrating reliable and secure data pipelines. Experienced in leveraging cloud services and networking protocols (VPN, TCP/IP) to enhance system performance, resilience, and real-time operations.
-`;
-    doc.text(summary, 20, y, { maxWidth: 170 });
-    y += 40;
-
-    doc.setFontSize(14);
-    doc.text("Skills & Technologies", 20, y);
-    y += 8;
-    doc.setFontSize(12);
-    doc.text(technicalSkills.join(", "), 20, y, { maxWidth: 170 });
-    y += 15;
-
-    doc.setFontSize(14);
-    doc.text("Work Experience", 20, y);
-    y += 8;
-    doc.setFontSize(12);
-    const experience = `
-2025 – Present: Software Development & Network Support Intern, National Treasury – ICT Directorate
-- Development of internal digital systems using Python and JavaScript
-- Supporting network operations including LAN/WAN setups
-- Contributing to cybersecurity and endpoint monitoring
-
-Jan 2025 – June 2025: Policy Sales / Financial Advisor, Old Mutual
-- Sold insurance & financial policies, ensuring KYC/AML compliance
-- Advised clients on financial planning & risk management
-
-2025: Software Developer / QA Engineer, Tech With Brands (TWB)
-- Built secure full-stack applications with monitoring and automation
-- Conducted vulnerability assessments and developed automated scripts
-- Provided ICT operational support ensuring policy compliance
-`;
-    doc.text(experience, 20, y, { maxWidth: 170 });
-    y += 60;
-
-    doc.setFontSize(14);
-    doc.text("Projects", 20, y);
-    y += 8;
-    doc.setFontSize(12);
-    const projects = `
-- UNIT-PAY Hackathon Project: Digital transformation prototype with automated workflows & real-time updates
-- Student Portal System: Academic management system with admin dashboard & SQL persistence
-- E-Commerce Platform: Dynamic shopping ecosystem with secure payments & role-based authentication
-- Consultancy Portfolio Website: Responsive consultancy showcase with live demo
-- Microservices Architecture Demo: Modular distributed system with CI/CD & Docker
-`;
-    doc.text(projects, 20, y, { maxWidth: 170 });
-    y += 50;
-
-    doc.setFontSize(14);
-    doc.text("Education", 20, y);
-    y += 8;
-    doc.setFontSize(12);
-    const education = `
-Mastering in Software Development, Full-Stack Engineering – Moringa School (2024 – 2025)
-BSc Information Technology & Telecommunications – Kenyatta University (2010 – 2015)
-`;
-    doc.text(education, 20, y, { maxWidth: 170 });
-    y += 30;
-
-    doc.setFontSize(14);
-    doc.text("Contact", 20, y);
-    y += 8;
-    doc.setFontSize(12);
-    const contact = `
-Phone: +254 711 211 446 / +254 703 551 240
-Email: enginkipngetichkoskei@gmail.com
-Location: Nairobi, Kenya
-P.O. Box 20, 00100
-`;
-    doc.text(contact, 20, y, { maxWidth: 170 });
-
-    doc.save("Kipngetich_Kosgei_CV.pdf");
+  const addPageIfNeeded = (space = 10) => {
+    if (y + space > pageHeight - margin) {
+      doc.addPage();
+      y = margin;
+    }
   };
+
+  const writeText = (text: string, options?: { fontSize?: number; maxWidth?: number }) => {
+    const lines = doc.splitTextToSize(text, options?.maxWidth || 170);
+    lines.forEach((line) => {
+      addPageIfNeeded(lineGap);
+      if (options?.fontSize) doc.setFontSize(options.fontSize);
+      doc.text(line, margin, y);
+      y += lineGap;
+    });
+  };
+
+  // ===== HEADER =====
+  doc.setFontSize(22);
+  doc.text("KIPNGETICH KOSGEI", margin, y);
+  y += 10;
+  doc.setFontSize(12);
+  doc.text("Software Engineer | Network Support Specialist", margin, y);
+  y += lineGap + 4;
+  doc.setFontSize(11);
+  writeText(
+    `Phone: +254 711 211 446 / +254 703 551 240
+Email: enginkipngetichkoskei@gmail.com
+Address: Nairobi, Kenya`
+  );
+  y += 10;
+
+  // ===== SUMMARY =====
+  doc.setFontSize(14);
+  writeText("Professional Summary");
+  doc.setFontSize(11);
+  writeText(
+    `Versatile and detail-oriented Software Engineer with strong expertise in full-stack
+development and network support. Proficient in JavaScript (React) and Python (Flask)
+for scalable, secure systems.
+
+Holds a Bachelor’s degree in Telecommunications & Information Technology, combining
+software engineering, networking, cybersecurity, and ICT operations experience.`
+  );
+  y += 10;
+
+  // ===== SKILLS =====
+  doc.setFontSize(14);
+  writeText("Core Skills");
+  doc.setFontSize(11);
+  writeText(
+    `• Software Development: React, TypeScript, Node.js, Python, Flask
+• Networking: TCP/IP, DNS, VPNs, GNSS, MQTT
+• System Administration: Windows & Linux
+• Databases: PostgreSQL, MySQL, SQL
+• Cloud & DevOps: Docker, Git, CI/CD
+• IT Support & Security Operations`
+  );
+  y += 10;
+
+  // ===== WORK EXPERIENCE =====
+  doc.setFontSize(14);
+  writeText("Work Experience");
+  doc.setFontSize(11);
+  const experiences = [
+    {
+      title: "National Treasury – ICT Directorate (2025 – Present)",
+      role: "Software Engineer & Network Support",
+      details: [
+        "Develop and support internal digital systems using Python and JavaScript",
+        "Provide LAN/WAN network support, troubleshooting, and monitoring",
+        "Assist in cybersecurity controls, endpoint monitoring, and system hardening",
+        "Support users and ensure reliability of critical government ICT infrastructure",
+      ],
+    },
+    {
+      title: "Self-Employed / Freelance (2023 – Present)",
+      role: "Full Stack Software Developer",
+      details: [
+        "Designed, developed, and deployed full-stack applications using React and Python/Flask",
+        "Integrated RESTful APIs, authentication, and database solutions",
+        "Delivered custom systems for e-commerce, logistics, and admin dashboards",
+        "Applied Git version control and agile development practices",
+      ],
+    },
+    {
+      title: "Longisa County Referral Hospital (2021 – 2023)",
+      role: "ICT System Administrator",
+      details: [
+        "Managed ICT operations, user support, and network troubleshooting",
+        "Implemented security controls, backups, and routine system audits",
+        "Supported hospital management systems and ensured system uptime",
+      ],
+    },
+    {
+      title: "County Government of Bomet (2016 – 2018)",
+      role: "ICT Assistant Officer",
+      details: [
+        "Supported ICT projects and departmental systems",
+        "Maintained LAN/WAN infrastructure and ICT equipment",
+        "Provided user training and helpdesk support",
+      ],
+    },
+    {
+      title: "National Bank of Kenya (2018 – 2019)",
+      role: "Direct Sales Representative",
+      details: [
+        "Marketed retail banking products and guided customer onboarding",
+        "Ensured KYC compliance and built strong client relationships",
+      ],
+    },
+  ];
+
+  experiences.forEach((exp) => {
+    writeText(exp.title, { fontSize: 12 });
+    writeText(exp.role, { fontSize: 11 });
+    exp.details.forEach((line) => {
+      writeText("• " + line);
+    });
+    y += 5;
+  });
+
+  // ===== EDUCATION & TRAINING =====
+  doc.setFontSize(14);
+  writeText("Education & Training");
+  doc.setFontSize(11);
+  const education = [
+    "BSc Telecommunications & Information Technology – Kenyatta University, Kenya",
+    "Software Development Engineering (SDE) – Moringa School, Kenya",
+    "AI / Machine Learning & LLM Training – Moringa School, Kenya",
+    "Cyber Security Training – IBM–MEA University",
+    "AML & CTF Certification – National Bank of Kenya",
+    "Oracle DBA 21c: Master Database Administration Specialization – Coursera",
+    "Entrepreneurship & Business Development – CyberShujaa Program",
+  ];
+  education.forEach((item) => writeText("• " + item));
+
+  // ===== REFERENCES =====
+  doc.setFontSize(14);
+  writeText("References");
+  doc.setFontSize(11);
+  writeText(
+    `Duncan Rotich
+Manager, M-Pesa Africa
+Phone: +254 713 980 960
+Email: dunkip.rotich@gmail.com
+
+Victor Mutai
+Infrastructure Lead, Safaricom
+Phone: +254 724 418 625
+Email: victor.mutai@safaricompl.co.ke`
+  );
+
+  doc.save("Kipngetich_Kosgei_CV.pdf");
+};
+
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 to-gray-800">
@@ -216,7 +287,7 @@ P.O. Box 20, 00100
           </div>
 
           {/* Social links */}
-          <div className="flex justify-center gap-4 mt-12 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+          <div className="flex justify-center gap-4 mt-12 aDonimate-fade-in" style={{ animationDelay: "0.6s" }}>
             <a
               href="https://github.com/Engkipngetich/"
               target="_blank"
