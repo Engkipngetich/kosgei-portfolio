@@ -12,116 +12,137 @@ type SkillCategory = {
   description: string;
   skills: SkillItem[];
 };
-
 const skillCategories: SkillCategory[] = [
   {
     icon: Code,
-    title: "Software Development",
+    title: "AI & Workflow Automation",
     description:
-      "Designing and implementing web applications with a focus on maintainability, performance, and developer experience.",
+      "Building intelligent business workflows using Generative AI, prompt engineering, APIs, and automation platforms.",
     skills: [
+      { name: "Prompt Engineering", level: "Advanced", percent: 90 },
+      { name: "ChatGPT", level: "Advanced", percent: 95 },
+      { name: "Claude AI", level: "Advanced", percent: 90 },
+      { name: "Gemini AI", level: "Advanced", percent: 88 },
+      { name: "Workflow Automation", level: "Advanced", percent: 92 },
+      { name: "REST APIs", level: "Advanced", percent: 90 },
+      { name: "Webhooks", level: "Advanced", percent: 85 },
+    ],
+  },
+
+  {
+    icon: Code,
+    title: "Software Engineering",
+    description:
+      "Developing secure, scalable enterprise applications and API-driven solutions.",
+    skills: [
+      { name: "React", level: "Advanced", percent: 92 },
+      { name: "TypeScript", level: "Advanced", percent: 88 },
+      { name: "JavaScript", level: "Advanced", percent: 92 },
       { name: "Python", level: "Advanced", percent: 90 },
-      { name: "JavaScript", level: "Advanced", percent: 90 },
-      { name: "TypeScript", level: "Advanced", percent: 85 },
-      { name: "React", level: "Advanced", percent: 90 },
-      { name: "Flask", level: "Intermediate", percent: 70 },
-      { name: "HTML/CSS", level: "Advanced", percent: 90 },
-      { name: "Tailwind CSS", level: "Advanced", percent: 85 },
+      { name: "Node.js", level: "Advanced", percent: 88 },
+      { name: "Flask", level: "Advanced", percent: 85 },
+      { name: "FastAPI", level: "Intermediate", percent: 80 },
+      { name: "Git & GitHub", level: "Advanced", percent: 90 },
     ],
   },
-  {
-    icon: Server,
-    title: "System Administration",
-    description:
-      "Managing servers and infrastructure: provisioning, monitoring, backup/recovery, virtualization, and automation to ensure high availability and operational excellence.",
-    skills: [
-      { name: "Linux", level: "Advanced", percent: 88 },
-      { name: "Windows Server", level: "Intermediate", percent: 65 },
-      { name: "Automation (bash/Ansible)", level: "Advanced", percent: 78 },
-      { name: "Virtualization (VMware/Hyper-V)", level: "Intermediate", percent: 70 },
-      { name: "Backups & Recovery", level: "Advanced", percent: 82 },
-      { name: "Monitoring & Alerting (Prometheus/ELK)", level: "Intermediate", percent: 72 },
-      { name: "Troubleshooting & Incident Response", level: "Advanced", percent: 85 },
-    ],
-  },
-  {
-    icon: Network,
-    title: "Networking",
-    description:
-      "Architecture, deployment and troubleshooting of LAN/WAN environments, secure connectivity, and fiber/cabling operations for enterprise networks.",
-    skills: [
-      { name: "TCP/IP", level: "Advanced", percent: 85 },
-      { name: "DNS & DHCP", level: "Advanced", percent: 80 },
-      { name: "LAN/WAN design", level: "Advanced", percent: 82 },
-      { name: "Fiber splicing & cabling", level: "Intermediate", percent: 68 },
-      { name: "VPN & Remote Access", level: "Intermediate", percent: 70 },
-      { name: "Network Security (ACLs/Firewalls)", level: "Intermediate", percent: 72 },
-    ],
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Services",
-    description: "Deploying and operating applications in cloud platforms with CI/CD and managed services.",
-    skills: [
-      { name: "Microsoft Azure", level: "Intermediate", percent: 70 },
-      { name: "Office 365", level: "Intermediate", percent: 65 },
-      { name: "Cloud Deployment", level: "Intermediate", percent: 70 },
-      { name: "CI/CD", level: "Intermediate", percent: 75 },
-    ],
-  },
-  {
-    icon: Settings,
-    title: "Operations",
-    description: "Operational practices including ticketing, documentation, and runbooks to keep teams effective.",
-    skills: [
-      { name: "Ticketing Systems", level: "Advanced", percent: 85 },
-      { name: "Documentation", level: "Advanced", percent: 90 },
-      { name: "IT Workflows", level: "Advanced", percent: 85 },
-      { name: "Helpdesk", level: "Intermediate", percent: 70 },
-    ],
-  },
-  {
-    icon: Shield,
-    title: "Security",
-    description:
-      "Cybersecurity fundamentals with hands-on experience in threat detection, access control, vulnerability management and incident response.",
-    skills: [
-      { name: "Security Protocols & Hardening", level: "Intermediate", percent: 72 },
-      { name: "Vulnerability Assessment", level: "Intermediate", percent: 68 },
-      { name: "SIEM / Log Monitoring", level: "Intermediate", percent: 65 },
-      { name: "Endpoint Protection & Backup", level: "Advanced", percent: 80 },
-      { name: "Incident Response", level: "Intermediate", percent: 70 },
-    ],
-  },
-  {
-    icon: Settings,
-    title: "ICT Support & General Helpdesk",
-    description:
-      "Day-to-day technical support for end-users and business systems: hardware troubleshooting, desktop support, user onboarding, and asset management.",
-    skills: [
-      { name: "Desktop & Mobile Support", level: "Advanced", percent: 88 },
-      { name: "Hardware Troubleshooting", level: "Advanced", percent: 85 },
-      { name: "User Training & Documentation", level: "Advanced", percent: 90 },
-      { name: "Asset & Patch Management", level: "Intermediate", percent: 72 },
-      { name: "Remote Support Tools (RDP/AnyDesk)", level: "Advanced", percent: 80 },
-    ],
-  },
+
   {
     icon: Database,
-    title: "Banking Solutions",
+    title: "Databases & Integration",
     description:
-      "Experience delivering banking technology solutions across sales, retail banking operations and loan servicing — integrating core banking, POS, and reconciliation workflows with a focus on regulatory compliance and customer experience.",
+      "Designing enterprise databases and integrating systems through APIs.",
     skills: [
-      { name: "Retail Banking Workflows", level: "Advanced", percent: 82 },
-      { name: "Loan Origination & Servicing", level: "Intermediate", percent: 70 },
-      { name: "Sales Enablement for Banking Products", level: "Advanced", percent: 80 },
-      { name: "Core Banking Integration", level: "Intermediate", percent: 72 },
-      { name: "POS / Merchant Solutions", level: "Intermediate", percent: 68 },
-      { name: "Reconciliation & Reporting", level: "Advanced", percent: 78 },
-      { name: "Regulatory Compliance (KYC/AML)", level: "Intermediate", percent: 70 },
+      { name: "PostgreSQL", level: "Advanced", percent: 88 },
+      { name: "MySQL", level: "Advanced", percent: 85 },
+      { name: "SQLite", level: "Advanced", percent: 90 },
+      { name: "API Integration", level: "Advanced", percent: 90 },
+      { name: "OpenAI API", level: "Advanced", percent: 90 },
+      { name: "M-Pesa Daraja API", level: "Advanced", percent: 85 },
+      { name: "JSON", level: "Advanced", percent: 92 },
+    ],
+  },
+
+  {
+    icon: Cloud,
+    title: "Cloud & DevOps",
+    description:
+      "Deploying cloud-native applications and implementing CI/CD pipelines.",
+    skills: [
+      { name: "Docker", level: "Advanced", percent: 88 },
+      { name: "GitHub Actions", level: "Advanced", percent: 82 },
+      { name: "CI/CD", level: "Advanced", percent: 85 },
+      { name: "Microsoft Azure", level: "Intermediate", percent: 78 },
+      { name: "AWS Fundamentals", level: "Intermediate", percent: 75 },
+      { name: "Linux", level: "Advanced", percent: 88 },
+      { name: "Cloud Deployment", level: "Advanced", percent: 85 },
+    ],
+  },
+
+  {
+    icon: Shield,
+    title: "Cybersecurity",
+    description:
+      "Applying security best practices throughout application development and infrastructure management.",
+    skills: [
+      { name: "IAM", level: "Advanced", percent: 82 },
+      { name: "Security Hardening", level: "Advanced", percent: 84 },
+      { name: "Vulnerability Assessment", level: "Intermediate", percent: 78 },
+      { name: "Network Security", level: "Advanced", percent: 82 },
+      { name: "Endpoint Protection", level: "Advanced", percent: 85 },
+      { name: "Backup & Recovery", level: "Advanced", percent: 88 },
+      { name: "ISO 27001", level: "Intermediate", percent: 75 },
+    ],
+  },
+
+  {
+    icon: Network,
+    title: "Enterprise Infrastructure",
+    description:
+      "Managing enterprise networks, servers, and digital transformation projects.",
+    skills: [
+      { name: "Windows Server", level: "Advanced", percent: 85 },
+      { name: "Linux Administration", level: "Advanced", percent: 90 },
+      { name: "LAN/WAN", level: "Advanced", percent: 88 },
+      { name: "TCP/IP", level: "Advanced", percent: 90 },
+      { name: "DNS & DHCP", level: "Advanced", percent: 85 },
+      { name: "VPN", level: "Advanced", percent: 82 },
+      { name: "Fiber Networks", level: "Intermediate", percent: 75 },
+    ],
+  },
+
+  {
+    icon: Server,
+    title: "Enterprise Solutions & Technical Consulting",
+    description:
+      "Helping organizations adopt enterprise technologies through solution consulting and pre-sales engagement.",
+    skills: [
+      { name: "IBM Solutions", level: "Intermediate", percent: 82 },
+      { name: "Solution Discovery", level: "Advanced", percent: 85 },
+      { name: "Technical Presentations", level: "Advanced", percent: 90 },
+      { name: "Requirements Gathering", level: "Advanced", percent: 88 },
+      { name: "Business Process Analysis", level: "Advanced", percent: 88 },
+      { name: "Digital Transformation", level: "Advanced", percent: 85 },
+      { name: "Stakeholder Management", level: "Advanced", percent: 88 },
+    ],
+  },
+
+  {
+    icon: Settings,
+    title: "Banking & Business Solutions",
+    description:
+      "Experience in enterprise banking, financial advisory, customer engagement, and business technology solutions.",
+    skills: [
+      { name: "Retail Banking", level: "Advanced", percent: 88 },
+      { name: "Financial Advisory", level: "Advanced", percent: 85 },
+      { name: "KYC / AML", level: "Advanced", percent: 90 },
+      { name: "Customer Relationship Management", level: "Advanced", percent: 90 },
+      { name: "Consultative Selling", level: "Advanced", percent: 88 },
+      { name: "Enterprise Sales", level: "Advanced", percent: 86 },
+      { name: "Solution Selling", level: "Advanced", percent: 88 },
     ],
   },
 ];
+
 
 const Skills = () => {
   return (
