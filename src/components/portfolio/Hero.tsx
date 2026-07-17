@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin, Download, Github, Linkedin } from "lucide-react";
 import jsPDF from "jspdf";
 
 const technicalSkills = [
+  "Software Engineering",
   "AI Workflow Automation",
   "Prompt Engineering",
   "React",
@@ -53,47 +54,64 @@ const Hero: React.FC = () => {
   };
 
   // ===== HEADER =====
-  doc.setFontSize(22);
-  doc.text("KIPNGETICH KOSGEI", margin, y);
-  y += 10;
-  doc.setFontSize(12);
-  doc.text("Software Engineer | Network Support Specialist", margin, y);
-  y += lineGap + 4;
-  doc.setFontSize(11);
-  writeText(
-    `Phone: +254 711 211 446 / +254 703 551 240
+doc.setFontSize(22);
+doc.text("KIPNGETICH KOSGEI", margin, y);
+y += 10;
+
+doc.setFontSize(12);
+doc.text(
+  "AI Workflow & Automation Specialist | Full-Stack Software Developer | Enterprise Solutions Consultant",
+  margin,
+  y
+);
+y += lineGap + 6;
+
+doc.setFontSize(11);
+writeText(
+`Phone: +254 711 211 446
 Email: enginkipngetichkoskei@gmail.com
-Address: Nairobi, Kenya`
-  );
-  y += 10;
+Location: Nairobi, Kenya
+LinkedIn: linkedin.com/in/eng-kipngetich-kosgei-38526278
+GitHub: github.com/Engkipngetich`
+);
 
-  // ===== SUMMARY =====
-  doc.setFontSize(14);
-  writeText("Professional Summary");
-  doc.setFontSize(11);
-  writeText(
-    `Versatile and detail-oriented Software Engineer with strong expertise in full-stack
-development and network support. Proficient in JavaScript (React) and Python (Flask)
-for scalable, secure systems.
+y += 10;
 
-Holds a Bachelor’s degree in Telecommunications & Information Technology, combining
-software engineering, networking, cybersecurity, and ICT operations experience.`
-  );
-  y += 10;
+// ===== SUMMARY =====
+doc.setFontSize(14);
+writeText("Professional Summary");
 
-  // ===== SKILLS =====
-  doc.setFontSize(14);
-  writeText("Core Skills");
-  doc.setFontSize(11);
-  writeText(
-    `• Software Development: React, TypeScript, Node.js, Python, Flask
-• Networking: TCP/IP, DNS, VPNs, GNSS, MQTT
-• System Administration: Windows & Linux
-• Databases: PostgreSQL, MySQL, SQL
-• Cloud & DevOps: Docker, Git, CI/CD
-• IT Support & Security Operations`
-  );
-  y += 10;
+doc.setFontSize(11);
+writeText(
+`AI Workflow & Automation Specialist, Full-Stack Software Developer, and Enterprise Solutions Consultant with over 7 years of experience delivering digital transformation solutions across banking, healthcare, government, and enterprise environments.
+
+Experienced in designing AI-powered workflow automations, enterprise software solutions, REST API integrations, cloud-native applications, and technical consulting. Skilled at translating complex technical concepts into business value, enabling organizations to improve efficiency through intelligent automation, modern software development, and enterprise technologies.
+
+Passionate about Generative AI, workflow optimization, cloud technologies, cybersecurity, and enterprise solution architecture.`
+);
+
+y += 10;
+
+// ===== SKILLS =====
+doc.setFontSize(14);
+writeText("Core Competencies");
+
+doc.setFontSize(11);
+writeText(
+`• AI Workflow Automation & Prompt Engineering
+• Enterprise Software Development (React, TypeScript, Node.js, Python, Flask, FastAPI)
+• REST APIs, Webhooks & Enterprise Systems Integration
+• Generative AI (ChatGPT, Claude, Gemini, OpenAI APIs)
+• Cloud Computing, Docker, GitHub Actions & CI/CD
+• PostgreSQL, MySQL & Database Design
+• Linux & Windows Server Administration
+• Enterprise Networking (LAN/WAN, TCP/IP, VPN, DNS & DHCP)
+• IBM Enterprise Solutions & Technical Consulting
+• Banking Technology, Digital Transformation & Solution Selling
+• Cybersecurity, IAM, Security Hardening & ISO 27001 Fundamentals`
+);
+
+y += 10;
 
   // ===== WORK EXPERIENCE =====
   doc.setFontSize(14);
@@ -188,7 +206,7 @@ Phone: +254 724 418 625
 Email: victor.mutai@safaricompl.co.ke`
   );
 
-  doc.save("Kipngetich_Kosgei_CV.pdf");
+  //doc.save("Kipngetich_Kosgei_CV.pdf");
 };
 
 
@@ -224,27 +242,41 @@ Email: victor.mutai@safaricompl.co.ke`
           </div>
 
           <p
-            className="text-xl md:text-2xl text-muted-foreground mb-6 animate-slide-up"
-            style={{ animationDelay: "0.1s" }}
-          >
-            Software Engineer • Network Engineering Specialist • IT Systems support Expert
-          </p>
+  className="text-xl md:text-2xl text-muted-foreground mb-6 animate-slide-up"
+  style={{ animationDelay: "0.1s" }}
+>
+  AI Workflow & Automation Specialist • Full-Stack Software Engineer • Enterprise Solutions Consultant
+</p>
 
-          <p
-            className="text-base md:text-lg text-muted-foreground/80 max-w-2xl mx-auto mb-6 leading-relaxed animate-slide-up"
-            style={{ animationDelay: "0.2s" }}
-          >
-            Software Engineer specializing in{" "}
-            <span className="text-foreground">full-stack development</span> with hands-on
-            experience in <span className="text-foreground">telecommunication systems</span> and{" "}
-            <span className="text-foreground">network infrastructure</span>. Proficient in building
-            scalable web applications using <span className="text-foreground">JavaScript/React</span>,{" "}
-            <span className="text-foreground">TypeScript</span>, <span className="text-foreground">Node.js</span>, and{" "}
-            <span className="text-foreground">Python/Flask</span>, while integrating reliable and
-            secure data pipelines. Experienced in leveraging cloud services and networking
-            protocols (VPN, TCP/IP) to enhance system performance, resilience, and real-time
-            operations.
-          </p>
+<p
+  className="text-base md:text-lg text-muted-foreground/80 max-w-5xl mx-auto mb-6 leading-relaxed animate-slide-up"
+  style={{ animationDelay: "0.2s" }}
+>
+  Passionate <span className="text-foreground font-semibold">Software Engineer</span> with
+  over <span className="text-foreground font-semibold">7 years of professional experience</span>
+  building scalable software solutions, AI-powered workflow automations, and enterprise
+  applications. Experienced in developing modern web applications using
+  <span className="text-foreground"> React</span>,
+  <span className="text-foreground"> TypeScript</span>,
+  <span className="text-foreground"> Node.js</span>,
+  <span className="text-foreground"> Python</span>, and
+  <span className="text-foreground"> Flask</span>, while integrating
+  <span className="text-foreground"> REST APIs</span>,
+  <span className="text-foreground"> cloud technologies</span>, and
+  <span className="text-foreground"> AI-powered business workflows</span>.
+  Participated in the
+  <span className="text-foreground font-semibold"> WALUMO Hackathon</span> and
+  <span className="text-foreground font-semibold"> Next2Exit 2025 Hackathon</span>,
+  where our teams developed
+  <span className="text-foreground"> UNITPAY</span>, an AI-assisted fintech platform addressing
+  Africa's fragmented payment ecosystem using
+  <span className="text-foreground"> Everyday Series AI</span> to automate repetitive business
+  processes, accelerate software development, and improve operational efficiency.
+  My experience also includes enterprise technology consulting, CRM systems,
+  retail banking operations, cybersecurity, and enterprise networking,
+  enabling me to bridge technology with business outcomes.
+</p>
+
 
           {/* Technical skills */}
           <div
