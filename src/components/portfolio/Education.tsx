@@ -32,12 +32,19 @@ const certifications = [
     institution: "National Bank of Kenya",
   },
   {
+    title: "Cloud and Network Security",
+    institution: "CyberShujaa Program",
+    highlight: "Completed the course with hands-on labs",
+  },
+  {
     title: "Oracle DBA 21c: Master Database Administration Specialization",
     institution: "Coursera",
+    highlight: "Completed the certification with distinction",
   },
   {
     title: "Entrepreneurship & Business Development",
     institution: "CyberShujaa Program",
+    highlight: "Completed the course with practical projects",  
   },
 ];
 

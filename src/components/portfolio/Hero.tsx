@@ -4,23 +4,29 @@ import { Mail, Phone, MapPin, Download, Github, Linkedin } from "lucide-react";
 import jsPDF from "jspdf";
 
 const technicalSkills = [
+  "AI Workflow Automation",
+  "Prompt Engineering",
   "React",
   "TypeScript",
   "Node.js",
   "Python",
+  "FastAPI",
   "Flask",
+  "REST APIs",
+  "OpenAI API",
+  "Webhooks",
+  "Zapier",
+  "Make",
   "Docker",
-  "Postgres",
+  "GitHub",
+  "PostgreSQL",
   "MySQL",
-  "SQL",
-  "Tailwind CSS",
-  "IoT",
-  "GNSS",
-  "MQTT",
-  "TCP/IP",
-  "VPN",
+  "Linux",
+  "IBM Solutions",
+  "Cloud",
+  "CI/CD",
+  "Cybersecurity",
 ];
-
 const Hero: React.FC = () => {
   const generatePDF = () => {
   const doc = new jsPDF();
